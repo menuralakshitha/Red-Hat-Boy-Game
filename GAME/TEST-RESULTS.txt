@@ -1,0 +1,19 @@
+VALIDATION RESULTS
+
+10 automated logic checks passed:
+1. HTML/CSS assets and element references exist.
+2. Idle animation uses all supplied frames; obstacles have the correct class.
+3. Enter and Space start once; early jumps and repeated keys are ignored.
+4. Run and Jump frames exist; repeated jumps land exactly without extra timers.
+5. Collision freezes score/audio; death animation cannot be interrupted.
+6. A well-timed jump clears a flame; a late jump causes a collision.
+7. Focused Jump and Restart buttons work with Enter and Space.
+8. Restart resets the game; initialization does not duplicate obstacles.
+9. 6,000 simulated gameplay ticks recycle obstacles without timer leaks.
+10. Blocked audio playback does not interrupt gameplay.
+
+The JavaScript syntax check also passed. Original image and audio assets are preserved.
+
+These checks execute the game logic in an isolated JavaScript environment with
+simulated elements and timers. A live browser play-test and visual rendering check
+were not completed: this environment blocks local-file browser previews.
