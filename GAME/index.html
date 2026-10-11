@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2D Game Red Hat Boy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Idle (2).png">
+</head>
+<body class="body" onkeydown="keyCheck(event)" onload="createBox()">
+    <main class="mainBox" id="mainBox" aria-label="Red Hat Boy runner game">
+        <div class="score" id="score" aria-label="Score">0</div>
+        <img src="Run (1).png" class="boy" id="boy" alt="Red Hat Boy">
+
+        <div class="startBox" id="startBox">
+            <img src="Idle (2).png" class="idleBoy" id="idleBoy" alt="Red Hat Boy ready to run">
+            <div class="startTextBox">
+                <div>Press Enter or Space to start</div>
+                <p class="instructions">Use the Up Arrow or Jump button to jump over the flames.</p>
+                <button class="button" id="startButton" type="button" onclick="startGame()">Start Game</button>
+            </div>
+        </div>
+
+        <div class="controls" id="controls" hidden>
+            <span>Up Arrow to jump</span>
+            <button class="button" id="jumpButton" type="button" onclick="startJump()">Jump ↑</button>
+        </div>
+
+        <div class="endBox" id="endBox" hidden>
+            <img src="game-over.png" class="game-over" alt="Game over">
+            <div>Your Score</div>
+            <div id="gameOverScore">0</div>
+            <button class="button" id="restartButton" type="button" onclick="newGame()">Restart Game</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
